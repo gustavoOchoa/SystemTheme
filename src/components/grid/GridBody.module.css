@@ -1,0 +1,45 @@
+.table{
+    table-layout:fixed;
+}
+.td_grid{
+    word-wrap: break-word;
+}
+
+.item_grid{
+    height: 35px;
+}
+
+.tr_selected{
+    background-color: whitesmoke;
+}
+
+.pointer {cursor: pointer;}
+
+.context_menu{
+    background-color: whitesmoke;
+    position: fixed;
+    z-index: 10000;
+    width: 120px;
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+.buttonBg{
+    background-color: white;
+}
+
+.buttonBg:hover{
+    background-color: whitesmoke;
+}
+
+
+.visible{
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
+}
+
+
+
+.iconColor{
+    color: #25476a;
+}

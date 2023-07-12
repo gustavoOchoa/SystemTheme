@@ -1,0 +1,9 @@
+#form{}
+#form input{
+    border: 1px solid rgba(0,0,0,.07);
+    color: #98A9B2;
+    font-size: .8rem;
+}
+.btn_send_login{
+    background-color: #103AAA;
+}

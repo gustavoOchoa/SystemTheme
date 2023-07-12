@@ -1,0 +1,98 @@
+.header{
+    background-color: var(--ts-body-bg);
+    color: var(--ts-comp-active-color);
+    grid-area: 1/1/2/3;
+}
+.header .header_inner{
+    align-items: center;
+    display: flex;
+    height: 3.125rem;
+    padding-inline: 1rem;
+}
+.header .header_brand{
+    background-color: transparent;
+    color: var(--ts-comp-active-color);
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+.header .header_brand .brand_wrap {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.header .header_brand .brand_wrap .brand_img {
+    margin-inline-end: .5rem;
+    text-align: center;
+    width: auto;
+}
+
+.header .header_brand .brand_wrap .brand_txt{
+    text-decoration: none;
+    color: white;
+    width: 150px;
+    word-wrap: break-word;
+    font-size: .85rem;
+    line-height: 1.2;
+}
+/** header content */
+.header .header_content{
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+.header .header_content_end, header .header_content_start {
+    align-items: center;
+    display: flex;
+    gap: .3rem;
+}
+.header .header_content_start {
+    flex-grow: 1;
+}
+.header .header_content_end>*, header .header_content_start>* {
+    margin: 0 -.1rem;
+}
+.header .header_content .dropdown_menu, .offcanvas_body, .sidebar {
+    visibility: hidden;
+}
+.header_content_start .nav_btn_burger{
+    border-radius: 50%;
+    padding: 5px;
+}
+.header_content_start .nav_btn_burger:hover{
+    background-color: var(--ts-body-color);
+    transition: background-color ease-in-out .35s;
+}
+.header_content_start .nav_btn_burger i{
+    font-size: 20px;
+    padding: 4px 5px;
+}
+.header .user_info{
+    font-size: 0.75rem;
+    display: block;
+    box-shadow: 0 .5rem 2rem 0 rgba(33,48,85,.31);
+    width: 275px;
+}
+.user_row{
+    width: 100%;
+    --bs-gutter-x: 0;
+    padding: 0px 10px 0px 5px;
+}
+.user_left{
+    padding: 0px 0px 0px 10px;
+    border-right: 1px dotted var(--ts-body-color);
+}
+.user_right{
+    padding: 0px 0px 0px 10px;
+    margin-bottom: 5px;
+}
+.user_right li{display: block; margin-bottom: 5px;}
+.user_right li:hover a{color: var(--ts-headings-color);}
+.user_right li a{text-decoration: none; color: var(--ts-body-color); cursor: pointer; font-size: var(--ts-user-font-size)}
+.user_name{font-size: var(--ts-body-font-size)}
+.notif_drop{width: 300px;}
+.notif_title{font-size: var(--ts-user-font-size);}
+.notif_small{font-size: var(--ts-user-font-size);}

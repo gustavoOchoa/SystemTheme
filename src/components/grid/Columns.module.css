@@ -1,0 +1,19 @@
+.freeze{}
+.visible{}
+.not_visible{}
+.column_title{}
+.column_sort{}
+.colmenu{}
+.th_display{
+    display: inline-block;
+}
+.th_title{
+    color: var(--ts-headings-color);
+    font-size: .92rem;
+    word-wrap: break-word;
+}
+.tr_rel{
+    position: relative;
+}
+
+.pointer {cursor: pointer;}

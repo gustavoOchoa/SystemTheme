@@ -1,0 +1,29 @@
+.card_header{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 5px 0px;
+    margin: 5px 0px;
+    border-bottom: 1px solid var(--ts-body-bg);
+}
+h5.title_search{
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+button.btn_show{
+    height: 20px;
+    float: left;
+    padding: 0px 5px;
+    box-shadow: none;
+}
+button.btn_show:focus{box-shadow: none;}
+button.btn_show i{
+    height: 20px;
+    filter: invert(.4);
+}
+.show_search form{
+    display: block;
+}
+.no_show_search form{
+    display: none;
+}

@@ -1,0 +1,51 @@
+.label{
+    margin-left: 5px;
+    padding: 0px 10px 20px !important;
+}
+.group{width: 75%; float: left; overflow: hidden; position: relative;}
+.errors{}
+input.no_valid{
+    border-color: var(--ts-invalid);
+    box-shadow: 0px 0px 5px var(--ts-invalid);
+}
+div.no_valid span{
+    color: var(--ts-invalid);
+    float: left;
+    width: 100%;
+}
+.input_line{
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 5px 0px 0px 5px !important;
+    height: 33px !important;
+}
+.input_btw{
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 5px 0px 0px 5px !important;
+    height: 33px !important;
+}
+.input_lupa{
+    width: 90%;
+    float: left;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 5px 0px 0px 5px !important;
+    height: 33px !important;
+}
+.btn_lupa{
+    float: left;
+    width: 10%;
+}
+.input_line:not(:placeholder-shown) ~ label,
+.input_line:focus ~ label{
+    transform: scale(0.8) translateY(-0.15rem) translateX(0.15rem) !important;
+}
+.left_btw{
+    float: left;
+    width: 50%;
+}
+.right_btw{
+    float: right;
+    width: 50%;
+}

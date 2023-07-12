@@ -1,0 +1,44 @@
+.grid_view{
+
+}
+.grid_title{
+    margin: 1rem 0px;
+    color: var(--ts-headings-color);
+}
+.grid_title h1{
+    font-size: 1.3rem;
+}
+.grid_header{
+    overflow: hidden;
+    border-bottom: 2px solid var(--ts-body-bg);
+    margin-bottom: 5px;
+}
+.grid_header table{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.grid_header th{
+    padding: 7px 0px;
+}
+.grid_body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.grid_box{
+    overflow-x: auto;
+}
+
+.grid_eye{
+    border-bottom: 2px solid var(--ts-body-bg);
+    margin-bottom: 5px;
+}
+.grid_eye table{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.grid_eye th{
+    padding: 7px 0px;
+}

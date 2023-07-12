@@ -1,0 +1,1227 @@
+@font-face{
+  font-family: 'goth-regular';
+  src: url(./fonts/didactgothic-regular-webfont.woff2) format('woff2'),
+  url(./fonts/didactgothic-regular-webfont.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --ts-body-bg: #25476a !important;
+  --ts-body-color: #75868f;
+  --ts-card-bg: #fff;
+  --ts-dropdown-bg: #fff;
+  --ts-headings-color: #373c43;
+  --ts-muted-color: #a5b1b8;
+  --ts-link-color: #03a9f4;
+  --ts-comp-active-bg: #246cb4;
+  --ts-comp-active-color: #fff;
+  --ts-border-color: rgba(0, 0, 0, 0.07);
+  --ts-body-bg-rgb: 237,241,246;
+  --ts-body-color-rgb: 117,134,143;
+  --ts-card-bg-rgb: 255,255,255;
+  --ts-dropdown-bg-rgb: 255,255,255;
+  --ts-headings-color-rgb: 55,60,67;
+  --ts-muted-color-rgb: 165,177,184;
+  --ts-link-color-rgb: 3,169,244;
+  --ts-comp-active-bg-rgb: 37,71,106;
+  --ts-comp-active-color-rgb: 255,255,255;
+  --ts-border-radius: 0.4375rem;
+  --ts-body-font-regular: "poppins-light", sans-serif;
+  --ts-body-font-bold: "poppins-medium", sans-serif;
+  --ts-font-monospace: Consolas, monospace;
+  --ts-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --ts-body-font-family: var(--ts-body-font-regular);
+  --ts-body-font-size: 0.85rem;
+  --ts-user-font-size: 0.8rem;
+  --ts-body-font-weight: 400;
+  --ts-body-line-height: 1.5;
+  --ts-table-border: #F0F3F8;
+  --ts-invalid: #DC3545;
+}
+/** ICONS */
+@font-face{
+  font-family:nifty-demo-icons;
+  font-style:normal;
+  font-weight:400;src:url(fonts/nifty-demo-icons.woff2) format("woff2")
+}
+[class*=" demo-pli-"],
+[class*=" demo-psi-"],
+[class^=demo-pli-],
+[class^=demo-psi-]{
+  font-family:nifty-demo-icons!important;
+  font-style:normal;
+  font-weight:400;
+  font-variant:normal;
+  text-transform:none;
+  line-height:1em;
+  display:inline-block;
+  text-decoration:inherit;
+  text-align:center;
+  vertical-align:middle;
+  color: var(--ts-comp-active-color);
+}
+/* demo-pli*/
+.demo-pli-add:before{content:"\e900"}.demo-pli-add-cart:before{content:"\e901"}.demo-pli-add-user:before{content:"\e902"}.demo-pli-add-user-star:before{content:"\e903"}.demo-pli-address-book:before{content:"\e904"}.demo-pli-arrow-down:before{content:"\e905"}.demo-pli-arrow-left:before{content:"\e906"}.demo-pli-arrow-left-2:before{content:"\e907"}.demo-pli-arrow-out-right:before{content:"\e908"}.demo-pli-arrow-right:before{content:"\e909"}.demo-pli-arrow-right-2:before{content:"\e90a"}.demo-pli-arrow-up:before{content:"\e90b"}.demo-pli-back:before{content:"\e90c"}.demo-pli-bag-coin:before{content:"\e90d"}.demo-pli-bar-chart:before{content:"\e90e"}.demo-pli-basket-coins:before{content:"\e90f"}.demo-pli-bell:before{content:"\e910"}.demo-pli-boot-2:before{content:"\e911"}.demo-pli-building:before{content:"\e912"}.demo-pli-calendar-4:before{content:"\e913"}.demo-pli-camera-2:before{content:"\e914"}.demo-pli-cart-coin:before{content:"\e915"}.demo-pli-celsius:before{content:"\e916"}.demo-pli-check:before{content:"\e917"}.demo-pli-checked-user:before{content:"\e918"}.demo-pli-chevron-down:before{content:"\ea5a"}.demo-pli-chevron-left:before{content:"\ea5b"}.demo-pli-chevron-right:before{content:"\ea5c"}.demo-pli-chevron-up:before{content:"\ea5d"}.demo-pli-clock:before{content:"\e919"}.demo-pli-close:before{content:"\e91a"}.demo-pli-coding:before{content:"\e91b"}.demo-pli-coin:before{content:"\e91c"}.demo-pli-computer-secure:before{content:"\e91d"}.demo-pli-consulting:before{content:"\e91e"}.demo-pli-credit-card-2:before{content:"\e91f"}.demo-pli-crop-2:before{content:"\e920"}.demo-pli-cross:before{content:"\ea52"}.demo-pli-data-cloud:before{content:"\e921"}.demo-pli-data-settings:before{content:"\e922"}.demo-pli-data-storage:before{content:"\e923"}.demo-pli-dot-horizontal:before{content:"\ea66"}.demo-pli-dot-vertical:before{content:"\ea67"}.demo-pli-download-from-cloud:before{content:"\e924"}.demo-pli-download-window:before{content:"\e925"}.demo-pli-electricity:before{content:"\e926"}.demo-pli-exclamation:before{content:"\e927"}.demo-pli-facebook:before{content:"\e928"}.demo-pli-facebook-2:before{content:"\e929"}.demo-pli-female-2:before{content:"\e92a"}.demo-pli-file:before{content:"\e92b"}.demo-pli-file-add:before{content:"\e92c"}.demo-pli-file-csv:before{content:"\e92d"}.demo-pli-file-edit:before{content:"\e92e"}.demo-pli-file-excel:before{content:"\e92f"}.demo-pli-file-html:before{content:"\e930"}.demo-pli-file-jpg:before{content:"\e931"}.demo-pli-file-music:before{content:"\e932"}.demo-pli-file-pictures:before{content:"\e933"}.demo-pli-file-search:before{content:"\e934"}.demo-pli-file-text-image:before{content:"\e935"}.demo-pli-file-txt:before{content:"\e936"}.demo-pli-file-word:before{content:"\e937"}.demo-pli-file-zip:before{content:"\e938"}.demo-pli-find-user:before{content:"\e939"}.demo-pli-fire-flame-2:before{content:"\e93a"}.demo-pli-firewall:before{content:"\e93b"}.demo-pli-folder:before{content:"\e93c"}.demo-pli-folder-organizing:before{content:"\e93d"}.demo-pli-folder-search:before{content:"\e93e"}.demo-pli-folder-with-document:before{content:"\e93f"}.demo-pli-folder-zip:before{content:"\e940"}.demo-pli-gear:before{content:"\e941"}.demo-pli-gears:before{content:"\e942"}.demo-pli-go-top:before{content:"\e943"}.demo-pli-google-plus:before{content:"\e944"}.demo-pli-happy:before{content:"\e945"}.demo-pli-heart-2:before{content:"\e946"}.demo-pli-home:before{content:"\e947"}.demo-pli-idea:before{content:"\e948"}.demo-pli-idea-2:before{content:"\e949"}.demo-pli-inbox-full:before{content:"\e94a"}.demo-pli-inbox-into:before{content:"\e94b"}.demo-pli-information:before{content:"\e94c"}.demo-pli-instagram:before{content:"\e94d"}.demo-pli-internet:before{content:"\e94e"}.demo-pli-laptop:before{content:"\e94f"}.demo-pli-laughing:before{content:"\e950"}.demo-pli-layout-grid:before{content:"\e951"}.demo-pli-left-4:before{content:"\e952"}.demo-pli-like:before{content:"\e953"}.demo-pli-like-2:before{content:"\e954"}.demo-pli-lock-2:before{content:"\e955"}.demo-pli-lock-user:before{content:"\e956"}.demo-pli-love:before{content:"\e957"}.demo-pli-love-user:before{content:"\e958"}.demo-pli-magnifi-glass:before{content:"\e959"}.demo-pli-mail:before{content:"\e95a"}.demo-pli-mail-attachment:before{content:"\e95b"}.demo-pli-mail-block:before{content:"\e95c"}.demo-pli-mail-favorite:before{content:"\e95d"}.demo-pli-mail-remove:before{content:"\e95e"}.demo-pli-mail-send:before{content:"\e95f"}.demo-pli-mail-unread:before{content:"\e960"}.demo-pli-male:before{content:"\e961"}.demo-pli-male-2:before{content:"\e962"}.demo-pli-male-female:before{content:"\e963"}.demo-pli-map:before{content:"\e964"}.demo-pli-map-2:before{content:"\e965"}.demo-pli-map-marker:before{content:"\e966"}.demo-pli-map-marker-2:before{content:"\e967"}.demo-pli-maximize-2:before{content:"\ea53"}.demo-pli-maximize-3:before{content:"\ea5e"}.demo-pli-medal-2:before{content:"\e968"}.demo-pli-min:before{content:"\ea54"}.demo-pli-mine:before{content:"\e969"}.demo-pli-minimize-2:before{content:"\ea55"}.demo-pli-minimize-3:before{content:"\ea5f"}.demo-pli-monitor-2:before{content:"\e96a"}.demo-pli-monitor-tablet:before{content:"\e96b"}.demo-pli-next:before{content:"\e96c"}.demo-pli-office:before{content:"\e96d"}.demo-pli-old-telephone:before{content:"\e96e"}.demo-pli-palette:before{content:"\e96f"}.demo-pli-paper-plane:before{content:"\e970"}.demo-pli-paperclip:before{content:"\e971"}.demo-pli-pen-4:before{content:"\e972"}.demo-pli-pen-5:before{content:"\e973"}.demo-pli-pencil:before{content:"\e974"}.demo-pli-photo-2:before{content:"\e975"}.demo-pli-photos:before{content:"\e976"}.demo-pli-previous:before{content:"\e977"}.demo-pli-printer:before{content:"\e978"}.demo-pli-question:before{content:"\e979"}.demo-pli-receipt-4:before{content:"\e97a"}.demo-pli-recycling:before{content:"\e97b"}.demo-pli-refresh:before{content:"\e97c"}.demo-pli-reload-3:before{content:"\e97d"}.demo-pli-remove:before{content:"\e97e"}.demo-pli-remove-user:before{content:"\e97f"}.demo-pli-repair:before{content:"\e980"}.demo-pli-repeat-2:before{content:"\e981"}.demo-pli-right-4:before{content:"\e982"}.demo-pli-share:before{content:"\e983"}.demo-pli-shopping-bag:before{content:"\e984"}.demo-pli-shopping-basket:before{content:"\e985"}.demo-pli-shopping-cart:before{content:"\e986"}.demo-pli-sidebar-window:before{content:"\e987"}.demo-pli-smartphone-3:before{content:"\e988"}.demo-pli-smile:before{content:"\e989"}.demo-pli-speech-bubble-2:before{content:"\e98a"}.demo-pli-speech-bubble-3:before{content:"\e98b"}.demo-pli-speech-bubble-4:before{content:"\e98c"}.demo-pli-speech-bubble-5:before{content:"\e98d"}.demo-pli-speech-bubble-7:before{content:"\e98e"}.demo-pli-split-vertical-2:before{content:"\e98f"}.demo-pli-star:before{content:"\e990"}.demo-pli-support:before{content:"\e991"}.demo-pli-tablet-2:before{content:"\e992"}.demo-pli-tactic:before{content:"\e993"}.demo-pli-tag:before{content:"\e994"}.demo-pli-tag-2:before{content:"\e995"}.demo-pli-tag-3:before{content:"\e996"}.demo-pli-tag-4:before{content:"\e997"}.demo-pli-tag-5:before{content:"\e998"}.demo-pli-temperature:before{content:"\e999"}.demo-pli-thunder:before{content:"\e99a"}.demo-pli-trash:before{content:"\e99b"}.demo-pli-twitter:before{content:"\e99c"}.demo-pli-twitter-2:before{content:"\e99d"}.demo-pli-unlike:before{content:"\e99e"}.demo-pli-unlike-2:before{content:"\e99f"}.demo-pli-unlock:before{content:"\e9a0"}.demo-pli-upload-to-cloud:before{content:"\e9a1"}.demo-pli-video:before{content:"\e9a2"}.demo-pli-list-view:before{content:"\e9a3"}.demo-pli-wallet-2:before{content:"\e9a4"}.demo-pli-warning-window:before{content:"\e9a5"}.demo-pli-window-2:before{content:"\e9a6"}.demo-pli-wrench:before{content:"\e9a7"}.demo-pli-yes:before{content:"\e9a8"}
+/* demo-psi*/
+.demo-psi-add:before{content:"\e9a9"}.demo-psi-add-cart:before{content:"\e9aa"}.demo-psi-add-user:before{content:"\e9ab"}.demo-psi-add-user-star:before{content:"\e9ac"}.demo-psi-address-book:before{content:"\e9ad"}.demo-psi-arrow-down:before{content:"\e9ae"}.demo-psi-arrow-left:before{content:"\e9af"}.demo-psi-arrow-left-2:before{content:"\e9b0"}.demo-psi-arrow-out-right:before{content:"\e9b1"}.demo-psi-arrow-right:before{content:"\e9b2"}.demo-psi-arrow-right-2:before{content:"\e9b3"}.demo-psi-arrow-up:before{content:"\e9b4"}.demo-psi-back:before{content:"\e9b5"}.demo-psi-bag-coin:before{content:"\e9b6"}.demo-psi-bar-chart:before{content:"\e9b7"}.demo-psi-basket-coins:before{content:"\e9b8"}.demo-psi-bell:before{content:"\e9b9"}.demo-psi-boot-2:before{content:"\e9ba"}.demo-psi-building:before{content:"\e9bb"}.demo-psi-calendar-4:before{content:"\e9bc"}.demo-psi-camera-2:before{content:"\e9bd"}.demo-psi-cart-coin:before{content:"\e9be"}.demo-psi-celsius:before{content:"\e9bf"}.demo-psi-check:before{content:"\e9c0"}.demo-psi-checked-user:before{content:"\e9c1"}.demo-psi-chevron-down:before{content:"\ea60"}.demo-psi-chevron-left:before{content:"\ea61"}.demo-psi-chevron-right:before{content:"\ea62"}.demo-psi-chevron-up:before{content:"\ea63"}.demo-psi-clock:before{content:"\e9c2"}.demo-psi-close:before{content:"\e9c3"}.demo-psi-coding:before{content:"\e9c4"}.demo-psi-coin:before{content:"\e9c5"}.demo-psi-computer-secure:before{content:"\e9c6"}.demo-psi-consulting:before{content:"\e9c7"}.demo-psi-credit-card-2:before{content:"\e9c8"}.demo-psi-crop-2:before{content:"\e9c9"}.demo-psi-cross:before{content:"\ea56"}.demo-psi-data-cloud:before{content:"\e9ca"}.demo-psi-data-settings:before{content:"\e9cb"}.demo-psi-data-storage:before{content:"\e9cc"}.demo-psi-dot-horizontal:before{content:"\ea68"}.demo-psi-dot-vertical:before{content:"\ea69"}.demo-psi-download-from-cloud:before{content:"\e9cd"}.demo-psi-download-window:before{content:"\e9ce"}.demo-psi-electricity:before{content:"\e9cf"}.demo-psi-exclamation:before{content:"\e9d0"}.demo-psi-facebook:before{content:"\e9d1"}.demo-psi-facebook-2:before{content:"\e9d2"}.demo-psi-female-2:before{content:"\e9d3"}.demo-psi-file:before{content:"\e9d4"}.demo-psi-file-add:before{content:"\e9d5"}.demo-psi-file-csv:before{content:"\e9d6"}.demo-psi-file-edit:before{content:"\e9d7"}.demo-psi-file-excel:before{content:"\e9d8"}.demo-psi-file-html:before{content:"\e9d9"}.demo-psi-file-jpg:before{content:"\e9da"}.demo-psi-file-music:before{content:"\e9db"}.demo-psi-file-pictures:before{content:"\e9dc"}.demo-psi-file-search:before{content:"\e9dd"}.demo-psi-file-text-image:before{content:"\e9de"}.demo-psi-file-txt:before{content:"\e9df"}.demo-psi-file-word:before{content:"\e9e0"}.demo-psi-file-zip:before{content:"\e9e1"}.demo-psi-find-user:before{content:"\e9e2"}.demo-psi-fire-flame-2:before{content:"\e9e3"}.demo-psi-firewall:before{content:"\e9e4"}.demo-psi-folder:before{content:"\e9e5"}.demo-psi-folder-organizing:before{content:"\e9e6"}.demo-psi-folder-search:before{content:"\e9e7"}.demo-psi-folder-with-document:before{content:"\e9e8"}.demo-psi-folder-zip:before{content:"\e9e9"}.demo-psi-gear:before{content:"\e9ea"}.demo-psi-gears:before{content:"\e9eb"}.demo-psi-go-top:before{content:"\e9ec"}.demo-psi-google-plus:before{content:"\e9ed"}.demo-psi-happy:before{content:"\e9ee"}.demo-psi-heart-2:before{content:"\e9ef"}.demo-psi-home:before{content:"\e9f0"}.demo-psi-idea:before{content:"\e9f1"}.demo-psi-idea-2:before{content:"\e9f2"}.demo-psi-inbox-full:before{content:"\e9f3"}.demo-psi-inbox-into:before{content:"\e9f4"}.demo-psi-information:before{content:"\e9f5"}.demo-psi-instagram:before{content:"\e9f6"}.demo-psi-internet:before{content:"\e9f7"}.demo-psi-laptop:before{content:"\e9f8"}.demo-psi-laughing:before{content:"\e9f9"}.demo-psi-layout-grid:before{content:"\e9fa"}.demo-psi-left-4:before{content:"\e9fb"}.demo-psi-like:before{content:"\e9fc"}.demo-psi-like-2:before{content:"\e9fd"}.demo-psi-lock-2:before{content:"\e9fe"}.demo-psi-lock-user:before{content:"\e9ff"}.demo-psi-love:before{content:"\ea00"}.demo-psi-love-user:before{content:"\ea01"}.demo-psi-magnifi-glass:before{content:"\ea02"}.demo-psi-mail:before{content:"\ea03"}.demo-psi-mail-attachment:before{content:"\ea04"}.demo-psi-mail-block:before{content:"\ea05"}.demo-psi-mail-favorite:before{content:"\ea06"}.demo-psi-mail-remove:before{content:"\ea07"}.demo-psi-mail-send:before{content:"\ea08"}.demo-psi-mail-unread:before{content:"\ea09"}.demo-psi-male:before{content:"\ea0a"}.demo-psi-male-2:before{content:"\ea0b"}.demo-psi-male-female:before{content:"\ea0c"}.demo-psi-map:before{content:"\ea0d"}.demo-psi-map-2:before{content:"\ea0e"}.demo-psi-map-marker:before{content:"\ea0f"}.demo-psi-map-marker-2:before{content:"\ea10"}.demo-psi-maximize-2:before{content:"\ea57"}.demo-psi-maximize-3:before{content:"\ea64"}.demo-psi-medal-2:before{content:"\ea11"}.demo-psi-min:before{content:"\ea58"}.demo-psi-mine:before{content:"\ea12"}.demo-psi-minimize-2:before{content:"\ea59"}.demo-psi-minimize-3:before{content:"\ea65"}.demo-psi-monitor-2:before{content:"\ea13"}.demo-psi-monitor-tablet:before{content:"\ea14"}.demo-psi-next:before{content:"\ea15"}.demo-psi-office:before{content:"\ea16"}.demo-psi-old-telephone:before{content:"\ea17"}.demo-psi-palette:before{content:"\ea18"}.demo-psi-paper-plane:before{content:"\ea19"}.demo-psi-paperclip:before{content:"\ea1a"}.demo-psi-pen-4:before{content:"\ea1b"}.demo-psi-pen-5:before{content:"\ea1c"}.demo-psi-pencil:before{content:"\ea1d"}.demo-psi-photo-2:before{content:"\ea1e"}.demo-psi-photos:before{content:"\ea1f"}.demo-psi-previous:before{content:"\ea20"}.demo-psi-printer:before{content:"\ea21"}.demo-psi-question:before{content:"\ea22"}.demo-psi-receipt-4:before{content:"\ea23"}.demo-psi-recycling:before{content:"\ea24"}.demo-psi-refresh:before{content:"\ea25"}.demo-psi-reload-3:before{content:"\ea26"}.demo-psi-remove:before{content:"\ea27"}.demo-psi-remove-user:before{content:"\ea28"}.demo-psi-repair:before{content:"\ea29"}.demo-psi-repeat-2:before{content:"\ea2a"}.demo-psi-right-4:before{content:"\ea2b"}.demo-psi-share:before{content:"\ea2c"}.demo-psi-shopping-bag:before{content:"\ea2d"}.demo-psi-shopping-basket:before{content:"\ea2e"}.demo-psi-shopping-cart:before{content:"\ea2f"}.demo-psi-sidebar-window:before{content:"\ea30"}.demo-psi-smartphone-3:before{content:"\ea31"}.demo-psi-smile:before{content:"\ea32"}.demo-psi-speech-bubble-2:before{content:"\ea33"}.demo-psi-speech-bubble-3:before{content:"\ea34"}.demo-psi-speech-bubble-4:before{content:"\ea35"}.demo-psi-speech-bubble-5:before{content:"\ea36"}.demo-psi-speech-bubble-7:before{content:"\ea37"}.demo-psi-split-vertical-2:before{content:"\ea38"}.demo-psi-star:before{content:"\ea39"}.demo-psi-support:before{content:"\ea3a"}.demo-psi-tablet-2:before{content:"\ea3b"}.demo-psi-tactic:before{content:"\ea3c"}.demo-psi-tag:before{content:"\ea3d"}.demo-psi-tag-2:before{content:"\ea3e"}.demo-psi-tag-3:before{content:"\ea3f"}.demo-psi-tag-4:before{content:"\ea40"}.demo-psi-tag-5:before{content:"\ea41"}.demo-psi-temperature:before{content:"\ea42"}.demo-psi-thunder:before{content:"\ea43"}.demo-psi-trash:before{content:"\ea44"}.demo-psi-twitter:before{content:"\ea45"}.demo-psi-twitter-2:before{content:"\ea46"}.demo-psi-unlike:before{content:"\ea47"}.demo-psi-unlike-2:before{content:"\ea48"}.demo-psi-unlock:before{content:"\ea49"}.demo-psi-upload-to-cloud:before{content:"\ea4a"}.demo-psi-video:before{content:"\ea4b"}.demo-psi-view-list:before{content:"\ea4c"}.demo-psi-wallet-2:before{content:"\ea4d"}.demo-psi-warning-window:before{content:"\ea4e"}.demo-psi-window-2:before{content:"\ea4f"}.demo-psi-wrench:before{content:"\ea50"}.demo-psi-yes:before{content:"\ea51"}
+html,
+body {
+  margin: 0;
+  font-family: var(--ts-body-font-family) !important;
+  font-size: var(--ts-body-font-size);
+  font-weight: var(--ts-body-font-weight);
+  line-height: var(--ts-body-line-height);
+  color: var(--ts-body-color);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--ts-body-bg) !important;
+}
+body.background{
+  background-image: url(../public/imgs/back_login.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+#root{
+  display: grid;
+  gap: 0 0;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  min-height: 100vh;
+  width: 100%;
+}
+#root:before{
+   background-color: rgba(0,0,0,.55);
+   content: "";
+   display: block;
+   inset: 0;
+   opacity: 0;
+   pointer-events: none;
+   position: fixed;
+   visibility: hidden;
+   z-index: -1;
+}
+main{
+  background-color: var(--ts-body-bg);
+  color: var(--ts-body-color);
+  display: flex;
+  flex-direction: column;
+  grid-area: 2/2/3/3;
+  width: 100%;
+  min-width: 0;
+  max-width: 100vw;
+  padding: 0px 1rem;
+}
+#content_back{
+  height: 70px;
+}
+#content_front{
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.jumping .mn--reveal.mn--show:before, .jumping:where(.mainnav,.content,.header,.header_brand,.sidebar,.offcanvas,.collapsing,.searchbox_input,.dropdown-menu,.mininav-toggle:after,.sb--pinned.content_boxed) {
+  transition-timing-function: cubic-bezier(.005,1.045,.25,.915)!important;
+}
+.header_btn {
+  border-radius: .875rem;
+  box-shadow: none!important;
+  color: inherit;
+  font-size: .8rem;
+  background-color: #FFF;
+}
+#user_drop_down.dropdown-menu, #notif.notif_drop_down{
+  display: block;
+  margin-top: 50px;
+  opacity: 0;
+  transform: scale(0);
+  visibility: visible;
+  transition: margin ease .35s,
+              opacity ease .35s,
+              transform 0s linear .35s;
+  inset: 0px 0px auto auto;
+}
+#user_drop_down.dropdown-menu.show, #notif.notif_drop_down.show{
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0px;
+  transition: opacity ease-in-out .35s,
+              margin ease .35s,
+              transform 0s;
+}
+
+#root.m_min .logout{margin: 0px;}
+#root.m_min .logout a{margin: 0px;overflow: inherit;}
+#root.m_min .logout a span{display: none;}
+#root.m_min .frmwk6_title{display:none;}
+#root.m_min .frmwk6_logo{
+  width: 40px;
+  margin-left: -11px;
+  transition: all ease-in-out .10s;
+}
+
+/** colores de bootstrap primarys */
+.btn-primary{
+  background-color: var(--ts-body-bg) !important;
+  border-color: var(--ts-body-bg) !important;
+  border-left-color: var(--ts-body-bg) !important;
+}
+.btn-primary:hover{
+  background-color: var(--ts-comp-active-bg) !important;
+  border-color: var(--ts-comp-active-bg) !important;
+  border-left-color: var(--ts-comp-active-bg) !important;
+}
+
+/** FILEPOND */
+/* eslint-disable */
+.filepond--assistant {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+/* Hard to override styles */
+.filepond--browser.filepond--browser {
+  /* is positioned absolute so it is focusable for form validation errors */
+  position: absolute;
+  margin: 0;
+  padding: 0;
+
+  /* is positioned ~behind drop label */
+  left: 1em;
+  top: 1.75em;
+  width: calc(100% - 2em);
+
+  /* hide visually */
+  opacity: 0;
+  font-size: 0; /* removes text cursor in Internet Explorer 11 */
+}
+.filepond--data {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  visibility: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+.filepond--drip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  opacity: 0.1;
+
+  /* can't interact with this element */
+  pointer-events: none;
+
+  /* inherit border radius from parent (needed for drip-blob cut of) */
+  border-radius: 0.5em;
+
+  /* this seems to prevent Chrome from redrawing this layer constantly */
+  background: rgba(0, 0, 0, 0.01);
+}
+.filepond--drip-blob {
+  position: absolute;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  top: 0;
+  left: 0;
+  width: 8em;
+  height: 8em;
+  margin-left: -4em;
+  margin-top: -4em;
+  background: #292625;
+  border-radius: 50%;
+
+  /* will be animated */
+  will-change: transform, opacity;
+}
+.filepond--drop-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0;
+  color: #4f4f4f;
+
+  /* center contents */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* fixes IE11 centering problems (is overruled by label min-height) */
+  height: 0px;
+
+  /* dont allow selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* will be animated */
+  will-change: transform, opacity;
+}
+/* Hard to override styles on purpose */
+.filepond--drop-label.filepond--drop-label label {
+  display: block;
+  margin: 0;
+  padding: 0.5em; /* use padding instead of margin so click area is not impacted */
+}
+.filepond--drop-label label {
+  cursor: default;
+  font-size: 0.875em;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.5;
+}
+.filepond--label-action {
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-color: #a7a4a4;
+  text-decoration-color: #a7a4a4;
+  cursor: pointer;
+}
+.filepond--root[data-disabled] .filepond--drop-label label {
+  opacity: 0.5;
+}
+/* Hard to override styles */
+.filepond--file-action-button.filepond--file-action-button {
+  font-size: 1em;
+  width: 1.625em;
+  height: 1.625em;
+
+  font-family: inherit;
+  line-height: inherit;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+
+  will-change: transform, opacity;
+
+  /* hidden label */
+}
+.filepond--file-action-button.filepond--file-action-button span {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.filepond--file-action-button.filepond--file-action-button {
+  /* scale SVG to fill button */
+}
+.filepond--file-action-button.filepond--file-action-button svg {
+  width: 100%;
+  height: 100%;
+}
+.filepond--file-action-button.filepond--file-action-button {
+  /* bigger touch area */
+}
+.filepond--file-action-button.filepond--file-action-button::after {
+  position: absolute;
+  left: -0.75em;
+  right: -0.75em;
+  top: -0.75em;
+  bottom: -0.75em;
+  content: '';
+}
+/* Soft styles */
+.filepond--file-action-button {
+  /* use default arrow cursor */
+  cursor: auto;
+
+  /* reset default button styles */
+  color: #fff;
+
+  /* set default look n feel */
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: none;
+
+  /* we animate box shadow on focus */
+  /* it's only slightly slower than animating */
+  /* a pseudo-element with transforms and renders */
+  /* a lot better on chrome */
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  transition: box-shadow 0.25s ease-in;
+}
+.filepond--file-action-button:hover,
+.filepond--file-action-button:focus {
+  box-shadow: 0 0 0 0.125em rgba(255, 255, 255, 0.9);
+}
+.filepond--file-action-button[disabled] {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.filepond--file-action-button[hidden] {
+  display: none;
+}
+/* edit button */
+.filepond--action-edit-item.filepond--action-edit-item {
+  width: 2em;
+  height: 2em;
+  padding: 0.1875em;
+}
+.filepond--action-edit-item.filepond--action-edit-item[data-align*='center'] {
+  margin-left: -0.1875em;
+}
+.filepond--action-edit-item.filepond--action-edit-item[data-align*='bottom'] {
+  margin-bottom: -0.1875em;
+}
+.filepond--action-edit-item-alt {
+  border: none;
+  line-height: inherit;
+  background: transparent;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  padding: 0;
+  margin: 0 0 0 0.25em;
+  pointer-events: all;
+  position: absolute;
+}
+.filepond--action-edit-item-alt svg {
+  width: 1.3125em;
+  height: 1.3125em;
+}
+.filepond--action-edit-item-alt span {
+  font-size: 0;
+  opacity: 0;
+}
+.filepond--file-info {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin: 0 0.5em 0 0;
+  min-width: 0;
+
+  /* will be animated */
+  will-change: transform, opacity;
+
+  /* can't do anything with this info */
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* no margins on children */
+}
+.filepond--file-info * {
+  margin: 0;
+}
+.filepond--file-info {
+  /* we don't want to have these overrules so these selectors are a bit more specific */
+}
+.filepond--file-info .filepond--file-info-main {
+  font-size: 0.75em;
+  line-height: 1.2;
+
+  /* we want ellipsis if this bar gets too wide */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+.filepond--file-info .filepond--file-info-sub {
+  font-size: 0.625em;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-in-out;
+  white-space: nowrap;
+}
+.filepond--file-info .filepond--file-info-sub:empty {
+  display: none;
+}
+.filepond--file-status {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  margin: 0;
+  min-width: 2.25em;
+  text-align: right;
+
+  /* will be animated */
+  will-change: transform, opacity;
+
+  /* can't do anything with this info */
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* no margins on children */
+}
+.filepond--file-status * {
+  margin: 0;
+  white-space: nowrap;
+}
+.filepond--file-status {
+  /* font sizes */
+}
+.filepond--file-status .filepond--file-status-main {
+  font-size: 0.75em;
+  line-height: 1.2;
+}
+.filepond--file-status .filepond--file-status-sub {
+  font-size: 0.625em;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-in-out;
+}
+/* Hard to override styles */
+.filepond--file-wrapper.filepond--file-wrapper {
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  height: 100%;
+
+  /* hide legend for visual users */
+}
+.filepond--file-wrapper.filepond--file-wrapper > legend {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.filepond--file {
+  position: static;
+  display: flex;
+  height: 100%;
+  align-items: flex-start;
+
+  padding: 0.5625em 0.5625em;
+
+  color: #fff;
+  border-radius: 0.5em;
+
+  /* control positions */
+}
+.filepond--file .filepond--file-status {
+  margin-left: auto;
+  margin-right: 2.25em;
+}
+.filepond--file .filepond--processing-complete-indicator {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: 3;
+}
+.filepond--file .filepond--processing-complete-indicator,
+.filepond--file .filepond--progress-indicator,
+.filepond--file .filepond--file-action-button {
+  position: absolute;
+}
+.filepond--file {
+  /* .filepond--file-action-button */
+}
+.filepond--file [data-align*='left'] {
+  left: 0.5625em;
+}
+.filepond--file [data-align*='right'] {
+  right: 0.5625em;
+}
+.filepond--file [data-align*='center'] {
+  left: calc(50% - 0.8125em); /* .8125 is half of button width */
+}
+.filepond--file [data-align*='bottom'] {
+  bottom: 1.125em;
+}
+.filepond--file [data-align='center'] {
+  top: calc(50% - 0.8125em);
+}
+.filepond--file .filepond--progress-indicator {
+  margin-top: 0.1875em;
+}
+.filepond--file .filepond--progress-indicator[data-align*='right'] {
+  margin-right: 0.1875em;
+}
+.filepond--file .filepond--progress-indicator[data-align*='left'] {
+  margin-left: 0.1875em;
+}
+/* make sure text does not overlap */
+[data-filepond-item-state='cancelled'] .filepond--file-info,
+[data-filepond-item-state*='invalid'] .filepond--file-info,
+[data-filepond-item-state*='error'] .filepond--file-info {
+  margin-right: 2.25em;
+}
+[data-filepond-item-state~='processing'] .filepond--file-status-sub {
+  opacity: 0;
+}
+[data-filepond-item-state~='processing']
+.filepond--action-abort-item-processing
+~ .filepond--file-status
+.filepond--file-status-sub {
+  opacity: 0.5;
+}
+[data-filepond-item-state='processing-error'] .filepond--file-status-sub {
+  opacity: 0;
+}
+[data-filepond-item-state='processing-error']
+.filepond--action-retry-item-processing
+~ .filepond--file-status
+.filepond--file-status-sub {
+  opacity: 0.5;
+}
+[data-filepond-item-state='processing-complete'] {
+  /* busy state */
+}
+[data-filepond-item-state='processing-complete'] .filepond--action-revert-item-processing svg {
+  -webkit-animation: fall 0.5s 0.125s linear both;
+  animation: fall 0.5s 0.125s linear both;
+}
+[data-filepond-item-state='processing-complete'] {
+  /* hide details by default, only show when can revert */
+}
+[data-filepond-item-state='processing-complete'] .filepond--file-status-sub {
+  opacity: 0.5;
+}
+[data-filepond-item-state='processing-complete']
+.filepond--processing-complete-indicator:not([style*='hidden'])
+~ .filepond--file-status
+.filepond--file-status-sub {
+  opacity: 0;
+}
+[data-filepond-item-state='processing-complete'] .filepond--file-info-sub {
+  opacity: 0;
+}
+[data-filepond-item-state='processing-complete']
+.filepond--action-revert-item-processing
+~ .filepond--file-info
+.filepond--file-info-sub {
+  opacity: 0.5;
+}
+/* file state can be invalid or error, both are visually similar but */
+/* having them as separate states might be useful */
+[data-filepond-item-state*='invalid'] .filepond--panel,
+[data-filepond-item-state*='invalid'] .filepond--file-wrapper,
+[data-filepond-item-state*='error'] .filepond--panel,
+[data-filepond-item-state*='error'] .filepond--file-wrapper {
+  -webkit-animation: shake 0.65s linear both;
+  animation: shake 0.65s linear both;
+}
+/* spins progress indicator when file is marked as busy */
+[data-filepond-item-state*='busy'] .filepond--progress-indicator svg {
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+/**
+ * States
+ */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
+}
+@-webkit-keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translateX(-0.0625em);
+    transform: translateX(-0.0625em);
+  }
+
+  20%,
+  80% {
+    -webkit-transform: translateX(0.125em);
+    transform: translateX(0.125em);
+  }
+
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-0.25em);
+    transform: translateX(-0.25em);
+  }
+
+  40%,
+  60% {
+    -webkit-transform: translateX(0.25em);
+    transform: translateX(0.25em);
+  }
+}
+@keyframes shake {
+  10%,
+  90% {
+    -webkit-transform: translateX(-0.0625em);
+    transform: translateX(-0.0625em);
+  }
+
+  20%,
+  80% {
+    -webkit-transform: translateX(0.125em);
+    transform: translateX(0.125em);
+  }
+
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-0.25em);
+    transform: translateX(-0.25em);
+  }
+
+  40%,
+  60% {
+    -webkit-transform: translateX(0.25em);
+    transform: translateX(0.25em);
+  }
+}
+@-webkit-keyframes fall {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes fall {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+/* ignore all other interaction elements while dragging a file */
+.filepond--hopper[data-hopper-state='drag-over'] > * {
+  pointer-events: none;
+}
+/* capture all hit tests using a hidden layer, this speeds up the event flow */
+.filepond--hopper[data-hopper-state='drag-over']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.filepond--progress-indicator {
+  z-index: 103;
+}
+.filepond--file-action-button {
+  z-index: 102;
+}
+.filepond--file-status {
+  z-index: 101;
+}
+.filepond--file-info {
+  z-index: 100;
+}
+.filepond--item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  padding: 0;
+  margin: 0.25em;
+
+  will-change: transform, opacity;
+
+  /* item children order */
+}
+.filepond--item > .filepond--panel {
+  z-index: -1;
+}
+/* has a slight shadow */
+.filepond--item > .filepond--panel .filepond--panel-bottom {
+  box-shadow: 0 0.0625em 0.125em -0.0625em rgba(0, 0, 0, 0.25);
+}
+.filepond--item {
+  /* drag related */
+}
+.filepond--item > .filepond--file-wrapper,
+.filepond--item > .filepond--panel {
+  transition: opacity 0.15s ease-out;
+}
+.filepond--item[data-drag-state] {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.filepond--item[data-drag-state] > .filepond--panel {
+  transition: box-shadow 0.125s ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.filepond--item[data-drag-state='drag'] {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.filepond--item[data-drag-state='drag'] > .filepond--panel {
+  box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.325);
+}
+.filepond--item[data-drag-state]:not([data-drag-state='idle']) {
+  z-index: 2;
+}
+/* states */
+.filepond--item-panel {
+  background-color: #64605e;
+}
+[data-filepond-item-state='processing-complete'] .filepond--item-panel {
+  background-color: #369763;
+}
+[data-filepond-item-state*='invalid'] .filepond--item-panel,
+[data-filepond-item-state*='error'] .filepond--item-panel {
+  background-color: #c44e47;
+}
+/* style of item panel */
+.filepond--item-panel {
+  border-radius: 0.5em;
+  transition: background-color 0.25s;
+}
+/* normal mode */
+.filepond--list-scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  will-change: transform;
+}
+/* scroll mode */
+.filepond--list-scroller[data-state='overflow'] .filepond--list {
+  bottom: 0;
+  right: 0;
+}
+.filepond--list-scroller[data-state='overflow'] {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-mask: linear-gradient(to bottom, #000 calc(100% - 0.5em), transparent 100%);
+  mask: linear-gradient(to bottom, #000 calc(100% - 0.5em), transparent 100%);
+}
+/* style scrollbar */
+.filepond--list-scroller::-webkit-scrollbar {
+  background: transparent;
+}
+.filepond--list-scroller::-webkit-scrollbar:vertical {
+  width: 1em;
+}
+.filepond--list-scroller::-webkit-scrollbar:horizontal {
+  height: 0;
+}
+.filepond--list-scroller::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 99999px;
+  border: 0.3125em solid transparent;
+  background-clip: content-box;
+}
+/* hard to overide styles on purpose */
+.filepond--list.filepond--list {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  /* prevents endless paint calls on filepond--list-scroller */
+  will-change: transform;
+}
+/* used for padding so allowed to be restyled */
+.filepond--list {
+  left: 0.75em;
+  right: 0.75em;
+}
+.filepond--root[data-style-panel-layout~='integrated'] {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--panel-root,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--panel-root {
+  border-radius: 0;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--panel-root > *,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--panel-root > * {
+  display: none;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--drop-label,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--drop-label {
+  bottom: 0;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 7;
+}
+.filepond--root[data-style-panel-layout~='circle'],
+.filepond--root[data-style-panel-layout~='integrated'] {
+  /* we're only loading one item, this makes the intro animation a bit nicer */
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--item-panel,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--item-panel {
+  display: none;
+}
+.filepond--root[data-style-panel-layout~='compact'] .filepond--list-scroller,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--list-scroller {
+  overflow: hidden;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.filepond--root[data-style-panel-layout~='compact'] .filepond--list,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--list {
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+.filepond--root[data-style-panel-layout~='compact'] .filepond--item,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--item {
+  margin: 0;
+}
+.filepond--root[data-style-panel-layout~='compact'] .filepond--file-wrapper,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--file-wrapper {
+  height: 100%;
+}
+.filepond--root[data-style-panel-layout~='compact'] .filepond--drop-label,
+.filepond--root[data-style-panel-layout~='integrated'] .filepond--drop-label {
+  z-index: 7;
+}
+.filepond--root[data-style-panel-layout~='circle'] {
+  border-radius: 99999rem;
+  overflow: hidden;
+}
+.filepond--root[data-style-panel-layout~='circle'] > .filepond--panel {
+  border-radius: inherit;
+}
+.filepond--root[data-style-panel-layout~='circle'] > .filepond--panel > * {
+  display: none;
+}
+.filepond--root[data-style-panel-layout~='circle'] {
+  /* circle cuts of this info, so best to hide it */
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--file-info {
+  display: none;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--file-status {
+  display: none;
+}
+.filepond--root[data-style-panel-layout~='circle'] .filepond--action-edit-item {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* dirfty way to fix circular overflow issue on safari 11+ */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    .filepond--root[data-style-panel-layout~='circle'] {
+      will-change: transform;
+    }
+  }
+}
+.filepond--panel-root {
+  border-radius: 0.5em;
+  background-color: #f1f0ef;
+}
+.filepond--panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0;
+
+  /* defaults to 100% height (fixed height mode) this fixes problem with panel height in IE11 */
+  height: 100% !important;
+
+  /* no interaction possible with panel */
+  pointer-events: none;
+}
+.filepond-panel:not([data-scalable='false']) {
+  height: auto !important;
+}
+.filepond--panel[data-scalable='false'] > div {
+  display: none;
+}
+.filepond--panel[data-scalable='true'] {
+  /* this seems to fix Chrome performance issues */
+  /* - when box-shadow is enabled */
+  /* - when multiple ponds are active on the same page */
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  /* prevent borders and backgrounds */
+  background-color: transparent !important;
+  border: none !important;
+}
+.filepond--panel-top,
+.filepond--panel-bottom,
+.filepond--panel-center {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+.filepond--panel-top,
+.filepond--panel-bottom {
+  height: 0.5em;
+}
+.filepond--panel-top {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom: none !important;
+
+  /* fixes tiny transparant line between top and center panel */
+}
+.filepond--panel-top::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  background-color: inherit;
+}
+.filepond--panel-center,
+.filepond--panel-bottom {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: translate3d(0, 0.5em, 0);
+  transform: translate3d(0, 0.5em, 0);
+}
+.filepond--panel-bottom {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-top: none !important;
+
+  /* fixes tiny transparant line between bottom and center of panel */
+}
+.filepond--panel-bottom::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  top: -1px;
+  background-color: inherit;
+}
+.filepond--panel-center {
+  /* the center panel is scaled using scale3d to fit the correct height */
+  /* we use 100px instead of 1px as scaling 1px to a huge height is really laggy on chrome */
+  height: 100px !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+
+  /* hide if not transformed, prevents a little flash when the panel is at 100px height while attached for first time */
+}
+.filepond--panel-center:not([style]) {
+  visibility: hidden;
+}
+.filepond--progress-indicator {
+  position: static;
+  width: 1.25em;
+  height: 1.25em;
+
+  color: #fff;
+
+  /* can't have margins */
+  margin: 0;
+
+  /* no interaction possible with progress indicator */
+  pointer-events: none;
+
+  /* will be animated */
+  will-change: transform, opacity;
+}
+.filepond--progress-indicator svg {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  transform-box: fill-box; /* should center the animation correctly when zoomed in */
+}
+.filepond--progress-indicator path {
+  fill: none;
+  stroke: currentColor;
+}
+.filepond--list-scroller {
+  z-index: 6;
+}
+.filepond--drop-label {
+  z-index: 5;
+}
+.filepond--drip {
+  z-index: 3;
+}
+.filepond--root > .filepond--panel {
+  z-index: 2;
+}
+.filepond--browser {
+  z-index: 1;
+}
+.filepond--root {
+  /* layout*/
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 1em;
+
+  /* base font size for whole component */
+  font-size: 1rem;
+
+  /* base line height */
+  line-height: normal;
+
+  /* up uses default system font family */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  /* will increase font weight a bit on Safari */
+  font-weight: 450;
+
+  /* default text alignment */
+  text-align: left;
+
+  /* better text rendering on Safari */
+  text-rendering: optimizeLegibility;
+
+  /* text direction is ltr for now */
+  direction: ltr;
+
+  /* optimize rendering */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/contain */
+  contain: layout style size;
+
+  /* correct box sizing, line-height and positioning on child elements */
+}
+.filepond--root * {
+  box-sizing: inherit;
+  line-height: inherit;
+}
+.filepond--root *:not(text) {
+  font-size: inherit;
+}
+.filepond--root {
+  /* block everything */
+}
+.filepond--root[data-disabled] {
+  pointer-events: none;
+}
+.filepond--root[data-disabled] .filepond--list-scroller {
+  pointer-events: all;
+}
+.filepond--root[data-disabled] .filepond--list {
+  pointer-events: none;
+}
+/**
+ * Root element children layout
+ */
+.filepond--root .filepond--drop-label {
+  min-height: 4.75em;
+}
+.filepond--root .filepond--list-scroller {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.filepond--root .filepond--credits {
+  position: absolute;
+  right: 0;
+  opacity: 0.175;
+  line-height: 0.85;
+  font-size: 11px;
+  color: inherit;
+  text-decoration: none;
+  z-index: 3;
+  bottom: -14px;
+}
+.filepond--root .filepond--credits[style] {
+  top: 0;
+  bottom: auto;
+  margin-top: 14px;
+}
