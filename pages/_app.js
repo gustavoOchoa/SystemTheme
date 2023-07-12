@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import '../styles/glyphicons.css'
 import '../styles/icons.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import Template from '../src/components/template/template'
@@ -18,7 +17,7 @@ function TDIFrmwk({ Component, pageProps }) {
     }, [router]);
 
 
-    if (router.asPath === '/intranet' || router.asPath === '/extranet' || router.asPath === '/intranet/password_reset') {
+    if (router.asPath === '/intranet' || router.asPath === '/extranet') {
         if(router.pathname.startsWith('/extranet')){
             import("../styles/extranet/extranet.css");
         }
